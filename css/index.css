@@ -1,7 +1,10 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gnD-w.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -127,154 +130,149 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  
+  background-color: #24252A;
 }
-
-li, a, button {
-  font-family: "Lato", sans-serif;
+html,
+body {
+  height: 100%;
+}
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #edf0f1;
   text-decoration: none;
 }
-
 header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 30px 10%;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,224,51,1) 0%, rgba(225,130,1,1) 90.5% );
+  border-bottom: 2px solid white;
+  margin: 1px;
+  height: 13%;
 }
-
-.logo{
+@media (max-width: 700px) {
+  header {
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+}
+header .logo {
   cursor: pointer;
   margin-right: auto;
-  
 }
-
-.nav_links{
+header .nav_links {
   list-style: none;
-
 }
-
-.nav_links li {
+header .nav_links li {
   display: inline-block;
   padding: 0px 20px;
-
 }
-
-.nav_links li a{
+header .nav_links li a {
   transition: all 0.3s ease 0s;
 }
-
-.nav_links li a:hover{
-  color: #0877f7
-  
+header .nav_links li a:hover {
+  color: #fbff0d;
 }
-
-
-
- /* button {
-  margin-left: 20px;
+button {
   padding: 9px 25px;
-  background-color: rgba(0,136,169,1);
+  background-color: #0088a9;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-button:hover{
-  background-color: rgba(0,136,169,1);
-}  */
-
-.glow-on-hover {
-  width: 132px;
-  height: 39px;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255)7);
-  background: rgb(0, 0, 0);
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
 }
-
-.glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #fbff00, #e69e18, #ff6600, #e71717, #dceff7);
-  position: absolute;
-  top: -2px;
-  left:-2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  color: #000
-}
-
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-} 
-
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-
-html {
-  font-size: 10px;
-  font-family: "Lato", Arial, sans-serif;
-}
-
-body {
-  height: 100%;
-}
-
-
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
-}
-
-
 h1 {
-	font-family: 'Lato';
-	font-size: x-large;
-  }
+  color: #edf0f1;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 66px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.intro {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: white;
+}
+.intro .code {
+  width: 300px;
+  color: #edf0f1;
+  margin-left: auto;
+  font-family: "Montserrat", sans-serif;
+  padding: 50px;
+}
+.intro h2 {
+  color: #edf0f1;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding-bottom: 30px;
+}
+.intro .graphic {
+  width: 300px;
+  color: #edf0f1;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 52px;
+}
+.intro h2 {
+  color: #edf0f1;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding-bottom: 30px;
+}
+.work-history {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.work-history .places {
+  width: 300px;
+  color: #edf0f1;
+  font-family: "Montserrat", sans-serif;
+  padding: 3px;
+  margin: 2px;
+}
+.work-history .places h2 {
+  color: #edf0f1;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.work-history .places ul {
+  line-height: 1.3;
+  padding: 4px;
+}
+.contact {
+  margin: 12px;
+  padding: 10px;
+  border: 2px solid white;
+  width: 88px;
+}
+footer {
+  display: flex;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
